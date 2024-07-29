@@ -27,6 +27,6 @@ package it.unicam.cs.vectorrally.app;
 
 public class App {
     public static void main(String[] args) {
-      System.out.println("Hello world!");
+      //TODO: COMPLETE THE MAIN METHOD
     }
 }

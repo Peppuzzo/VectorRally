@@ -24,9 +24,12 @@
 
 package it.unicam.cs.vectorrally.api.Car;
 
-
 /**
  * this responsibility of this class is to represent the possible directions of movement of a car.
+ */
+
+/**
+ * An enum representing the possible directions of movement of a car.
  */
 public enum Direction {
   UP,

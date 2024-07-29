@@ -22,7 +22,18 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Circuit;
+package it.unicam.cs.vectorrally.api.Car;
 
-public class TrakFile {
+
+/**
+ * this responsibility of this class is to represent the possible directions of movement of a car.
+ */
+public enum Direction {
+  UP,
+  DOWN,
+  LEFT,
+  RIGHT,
+  UP_LEFT,
+  UP_RIGHT
 }
+

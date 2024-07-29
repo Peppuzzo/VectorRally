@@ -22,8 +22,16 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Bot;
+package it.unicam.cs.vectorrally.api.Car;
 
-public interface InterfaceProva {
-    void metodoProva();
+/*
+ * this interface is intended to give the car a certain direction of where to move
+ */
+
+public interface Movable {
+
+  /**
+   * @param direction the current direction of the car taken
+   */
+  void move (Direction direction);
 }

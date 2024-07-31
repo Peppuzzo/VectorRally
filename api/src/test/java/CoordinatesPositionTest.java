@@ -22,22 +22,25 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.items;
+import it.unicam.cs.vectorrally.api.items.Position;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * This interface represents the position of the machine
- * The contract of this interface is that the x and y coordinates are always positive.
- */
+public class CoordinatesPositionTest {
 
-public interface Position {
+  @Test
+  void testCoordinatePositive(){
+    Position position = new Position(){
+      @Override
+      public int getX(){ return 1; }
 
-    /**
-    * @return the x coordinate of the machine
-    */
-    int getX() throws IllegalArgumentException;
+      @Override
+      public int getY(){ return 1; }
 
-    /**
-    * @return the y coordinate of the machine
-    */
-    int getY();
-}
+      };
+
+    assertTrue(position.getX() > 0, "The x coordinate is not positive");
+    assertTrue(position.getY() > 0, "The y coordinate is not positive");
+
+    }
+  }

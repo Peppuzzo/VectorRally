@@ -22,21 +22,16 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Car;
+package it.unicam.cs.vectorrally.api.items;
 
-/**
- * this responsibility of this class is to represent the possible directions of movement of a car.
+/*
+ * this interface is intended to give the car a certain direction of where to move
  */
 
-/**
- * An enum representing the possible directions of movement of a car.
- */
-public enum Direction {
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
-  UP_LEFT,
-  UP_RIGHT
+public interface Movable {
+
+  /**
+   * @param direction the current direction of the car taken
+   */
+  void move (Direction direction);
 }
-

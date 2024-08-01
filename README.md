@@ -1,6 +1,8 @@
 # <h1 align="center"> VectorRally 🏎️ </h1>
 
-![ImageVectorrally](https://media.istockphoto.com/id/1340683539/vector/rallying-event-linear-icon.jpg?s=1024x1024&w=is&k=20&c=CFGAbeL9j2n8zoynx3aqwYwCizjy-ruEYxo1PRnaJHY=)
+<div style=" text-align: center; ">
+  <img src="https://media.istockphoto.com/id/1340683539/vector/rallying-event-linear-icon.jpg?s=1024x1024&w=is&k=20&c=CFGAbeL9j2n8zoynx3aqwYwCizjy-ruEYxo1PRnaJHY=" alt="ImageVectorrally" width="500" height="500">
+</div>
 
 
 ## Description

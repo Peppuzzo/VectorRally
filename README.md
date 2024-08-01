@@ -17,7 +17,7 @@ Follow these steps to set up your development environment:
 
 1. Clone the repository:
     ```sh
-    https://github.com/Peppuzzo/VectorRally.git
+    git clone https://github.com/Peppuzzo/VectorRally.git
     ```
 
 2. Access the project directory:

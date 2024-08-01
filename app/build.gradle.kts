@@ -15,3 +15,5 @@ application {
     // Define the main class for the application.
     mainClass = "it.unicam.cs.vectorrally.app.App"
 }
+
+

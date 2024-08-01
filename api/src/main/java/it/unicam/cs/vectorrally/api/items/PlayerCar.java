@@ -22,12 +22,38 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.app;
+package it.unicam.cs.vectorrally.api.items;
 
-public class App {
-    public static void main(String[] args) {
 
-      // TODO: COMPLETE THE MAIN METHOD
+import it.unicam.cs.vectorrally.utilities.Color;
 
-    }
+/**
+ * This class represents the player's car in the game
+ */
+public class PlayerCar extends BaseCar<Position, Color> {
+
+  /**
+   * @param position the position of the car
+   * @param color the color of the car
+   */
+  public PlayerCar(Position position, Color color) {
+    super(position, color);
+  }
+
+  @Override
+  public Position getPosition() {
+    // TODO Complete this method
+    return null;
+  }
+
+  @Override
+  public Color getColor() {
+    // TODO Complete this method
+    return null;
+  }
+
+  @Override
+  public void move(Direction direction) {
+    // TODO Complete this method
+  }
 }

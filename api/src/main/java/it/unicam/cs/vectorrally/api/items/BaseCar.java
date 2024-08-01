@@ -22,12 +22,28 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.app;
+package it.unicam.cs.vectorrally.api.items;
 
-public class App {
-    public static void main(String[] args) {
+import it.unicam.cs.vectorrally.utilities.Color;
 
-      // TODO: COMPLETE THE MAIN METHOD
+/**
+ * This class represents the car in the game
+ * @param <P> the position of the car
+ * @param <C> the color of the car
+ */
+public abstract class BaseCar<P extends Position, C extends Color> implements Movable {
 
-    }
+  protected P position;
+  protected C color;
+
+  public BaseCar(P position, C color) {
+    this.position = position;
+    this.color = color;
+  }
+
+  public abstract P getPosition();
+
+  public abstract C getColor();
+
+
 }

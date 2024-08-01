@@ -24,9 +24,12 @@
 
 package it.unicam.cs.vectorrally.app;
 
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-      //TODO: COMPLETE THE MAIN METHOD
+
+      // TODO: COMPLETE THE MAIN METHOD
+
     }
 }

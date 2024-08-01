@@ -24,21 +24,13 @@
 
 package it.unicam.cs.vectorrally.utilities;
 
-/**
- * This class represents a pencil that can draw lines on a canvas.
- *
- * The contract of this class is that the color of the pencil is always not null.
- */
+public record RGBColor(int red,  int green, int blue) implements Color {
 
-public class CarPencil extends Pencil {
+  public int getRed() { return red; }
 
-  public CarPencil(Color color) {
-    super(color);
-  }
+  public int getGreen() { return green; }
 
-  @Override
-  public void drawLine(int x1, int y1, int x2, int y2) {
-    System.out.println("Drawing a line from (" + x1 + ", " + y1 + ") to (" + x2 + ", " + y2 + ") with color " + getColor().getHex());
-  }
+  public int getBlue() { return blue;}
 
+  public String getHex() { return String.format("#%02x%02x%02x", red, green, blue); }
 }

@@ -42,6 +42,4 @@ public abstract class Pencil {
    */
   public abstract void drawLine(int x1, int y1, int x2, int y2);
 
-
-
 }

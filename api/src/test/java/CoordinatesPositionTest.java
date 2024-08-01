@@ -38,9 +38,7 @@ public class CoordinatesPositionTest {
       public int getY(){ return 1; }
 
       };
-
     assertTrue(position.getX() > 0, "The x coordinate is not positive");
     assertTrue(position.getY() > 0, "The y coordinate is not positive");
-
     }
   }

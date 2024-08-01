@@ -22,31 +22,26 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Circuit;
+package it.unicam.cs.vectorrally.utilities;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+public abstract class Pencil {
 
-public class CircuitReader implements CircuitReaderInterface {
+  private Color color;
 
-    /**
-     * Reads the circuit from the file and returns a list of strings representing the circuit.
-     *
-     * @param filePath the path of the file containing the circuit.
-     * @return a list of strings representing the circuit.
-     * @throws IOException if an I/O error occurs.
-     */
-    public List<String> readCircuit(String filePath) throws IOException {
-        List<String> circuitData = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                circuitData.add(line);
-            }
-        }
-        return circuitData;
-    }
+  public Pencil(Color color) { this.color = color; }
+
+  public Color getColor() { return color; }
+
+  public void setColor(Color color) { this.color = color; }
+
+  /**
+   * @param x1 the x coordinate of the first point
+   * @param y1 the y coordinate of the first point
+   * @param x2 the x coordinate of the second point
+   * @param y2 the y coordinate of the second point
+   */
+  public abstract void drawLine(int x1, int y1, int x2, int y2);
+
+
+
 }

@@ -34,7 +34,7 @@ public interface Position {
     /**
     * @return the x coordinate of the machine
     */
-    int getX() throws IllegalArgumentException;
+    int getX();
 
     /**
     * @return the y coordinate of the machine

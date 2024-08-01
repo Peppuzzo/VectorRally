@@ -25,6 +25,7 @@
 package it.unicam.cs.vectorrally.api.items;
 
 
+import it.unicam.cs.vectorrally.api.environment.Position;
 import it.unicam.cs.vectorrally.utilities.Color;
 
 /**
@@ -52,6 +53,10 @@ public class PlayerCar extends BaseCar<Position, Color> {
     return null;
   }
 
+  /**
+   * Move the car in the specified direction
+   * @param direction the direction in which the car should move
+   */
   @Override
   public void move(Direction direction) {
     // TODO Complete this method

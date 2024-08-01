@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Circuit;
+package it.unicam.cs.vectorrally.api.environment;
 
 import java.io.IOException;
 import java.util.List;

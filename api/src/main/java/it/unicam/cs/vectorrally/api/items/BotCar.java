@@ -22,31 +22,42 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.Circuit;
+package it.unicam.cs.vectorrally.api.items;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import it.unicam.cs.vectorrally.api.environment.Position;
+import it.unicam.cs.vectorrally.utilities.Color;
 
-public class CircuitReader implements CircuitReaderInterface {
+/**
+ * This class represents the bot car in the game
+ *
+ * this responsibility of this class is to represent the bot car in the game
+ */
 
-    /**
-     * Reads the circuit from the file and returns a list of strings representing the circuit.
-     *
-     * @param filePath the path of the file containing the circuit.
-     * @return a list of strings representing the circuit.
-     * @throws IOException if an I/O error occurs.
-     */
-    public List<String> readCircuit(String filePath) throws IOException {
-        List<String> circuitData = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                circuitData.add(line);
-            }
-        }
-        return circuitData;
-    }
+public class BotCar extends BaseCar<Position, Color> {
+
+  public BotCar(Position position, Color color) {
+    super(position, color);
+  }
+
+  @Override
+  public Position getPosition() {
+    // TODO Complete this method
+    return null;
+  }
+
+  @Override
+  public Color getColor() {
+    // TODO Complete this method
+    return null;
+  }
+
+  /**
+   * Move the car in the specified direction
+   *
+   * @param direction the direction in which the car should move
+   */
+  @Override
+  public void move(Direction direction) {
+    // TODO Auto-generated method stub
+  }
 }

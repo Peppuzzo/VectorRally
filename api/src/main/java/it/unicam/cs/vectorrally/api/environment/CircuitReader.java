@@ -22,22 +22,31 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.api.items;
+package it.unicam.cs.vectorrally.api.environment;
 
-/**
- * This interface represents the position of the machine
- * The contract of this interface is that the x and y coordinates are always positive.
- */
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public interface Position {
-
-    /**
-    * @return the x coordinate of the machine
-    */
-    int getX();
+public class CircuitReader implements CircuitReaderInterface {
 
     /**
-    * @return the y coordinate of the machine
-    */
-    int getY();
+     * Reads the circuit from the file and returns a list of strings representing the circuit.
+     *
+     * @param filePath the path of the file containing the circuit.
+     * @return a list of strings representing the circuit.
+     * @throws IOException if an I/O error occurs.
+     */
+    public List<String> readCircuit(String filePath) throws IOException {
+        List<String> circuitData = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                circuitData.add(line);
+            }
+        }
+        return circuitData;
+    }
 }

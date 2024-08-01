@@ -24,6 +24,7 @@
 
 package it.unicam.cs.vectorrally.api.items;
 
+import it.unicam.cs.vectorrally.api.environment.Position;
 import it.unicam.cs.vectorrally.utilities.Color;
 
 /**

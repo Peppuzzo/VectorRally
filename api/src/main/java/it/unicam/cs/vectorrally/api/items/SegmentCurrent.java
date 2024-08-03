@@ -22,15 +22,58 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.utilities;
+package it.unicam.cs.vectorrally.api.items;
 
-public record RGBColor(int red,  int green, int blue) implements Color {
+import it.unicam.cs.vectorrally.api.environment.Point;
+import java.awt.Color;
+import java.util.Objects;
 
-  public int getRed() { return red; }
+/**
+ * This class represents the current segment of the game
+ */
 
-  public int getGreen() { return green; }
+public class SegmentCurrent implements Segment {
 
-  public int getBlue() { return blue;}
+  private Point x;
+  private Point y;
+  private double size;
+  private Color color;
 
-  public String getHex() { return String.format("#%02x%02x%02x", red, green, blue); }
+  public SegmentCurrent(Point x, Point y, double size, Color color) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.color = color;
+  }
+
+  public Point getX() {
+    return x;
+  }
+
+  public Point getY() {
+    return y;
+  }
+
+  public double getSize() {
+    return size;
+  }
+
+  public Color getColor() {
+    return color;
+  }
+
+  @Override
+  public Direction getDirection() {
+    // TODO Complete this method
+    return null;
+  }
+
+  @Override
+  public boolean isConnectedTo(Segment segment) {
+    if(Objects.requireNonNull(segment).equals(this)) {
+      return false;
+    }
+    return this.x.equals(segment.getY()) || this.x.equals(segment.getY())
+        || this.y.equals(segment.getX()) || this.y.equals(segment.getY());
+  }
 }

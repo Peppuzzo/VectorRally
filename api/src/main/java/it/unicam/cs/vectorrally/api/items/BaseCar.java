@@ -25,14 +25,14 @@
 package it.unicam.cs.vectorrally.api.items;
 
 import it.unicam.cs.vectorrally.api.environment.Position;
-import it.unicam.cs.vectorrally.utilities.Color;
+import java.awt.Color;
 
 /**
  * This class represents the car in the game
  * @param <P> the position of the car
  * @param <C> the color of the car
  */
-public abstract class BaseCar<P extends Position, C extends Color> implements Movable {
+public abstract class BaseCar<P extends Position, C extends Color> implements Movable,Segment {
 
   protected P position;
   protected C color;

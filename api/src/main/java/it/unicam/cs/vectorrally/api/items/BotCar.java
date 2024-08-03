@@ -25,7 +25,8 @@
 package it.unicam.cs.vectorrally.api.items;
 
 import it.unicam.cs.vectorrally.api.environment.Position;
-import it.unicam.cs.vectorrally.utilities.Color;
+import it.unicam.cs.vectorrally.api.environment.Point;
+import java.awt.Color;
 
 /**
  * This class represents the bot car in the game
@@ -46,9 +47,40 @@ public class BotCar extends BaseCar<Position, Color> {
   }
 
   @Override
+  public Point getX() {
+    return null;
+  }
+
+  @Override
+  public Point getY() {
+    return null;
+  }
+
+  @Override
+  public double getSize() {
+    return 0;
+  }
+
+  @Override
   public Color getColor() {
     // TODO Complete this method
     return null;
+  }
+
+  @Override
+  public Direction getDirection() {
+    return null;
+  }
+
+  /**
+   * Check if the bot car is connected to the specified segment
+   *
+   * @param segment the segment to check
+   * @return true if the bot car is connected to the specified segment, false otherwise
+   */
+  @Override
+  public boolean isConnectedTo(Segment segment) {
+    return false;
   }
 
   /**
@@ -58,6 +90,6 @@ public class BotCar extends BaseCar<Position, Color> {
    */
   @Override
   public void move(Direction direction) {
-    // TODO Auto-generated method stub
+    // TODO Complete this method
   }
 }

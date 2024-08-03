@@ -22,23 +22,48 @@
  * SOFTWARE.
  */
 
-package it.unicam.cs.vectorrally.utilities;
+package it.unicam.cs.vectorrally.api.environment;
+
+import java.util.Objects;
 
 /**
- * This class represents a pencil that can draw lines on a canvas.
- *
- * The contract of this class is that the color of the pencil is always not null.
+ * This class represents a point in the game
  */
+public class Point implements Position{
 
-public class CarPencil extends Pencil {
+  private int x;
+  private int y;
 
-  public CarPencil(Color color) {
-    super(color);
+  public Point(int x, int y) {
+    this.x = x;
+    this.y = y;
   }
 
   @Override
-  public void drawLine(int x1, int y1, int x2, int y2) {
-    System.out.println("Drawing a line from (" + x1 + ", " + y1 + ") to (" + x2 + ", " + y2 + ") with color " + getColor().getHex());
+  public int getX() {
+    return 0;
   }
+
+  @Override
+  public int getY() {
+    return 0;
+  }
+
+
+  /**
+   * @param o the object to compare
+   * @return true if the two objects are equal, false otherwise
+   */
+  public boolean equals(Object o) {
+    if (this == o) { return true; }
+    if (o == null || getClass() != o.getClass()) { return false; }
+    Point point = (Point) o;
+    return x == point.x && y == point.y;
+  }
+
+  /**
+   * @return the hash code of the object
+   */
+  public int hashCode() { return Objects.hash(x, y); }
 
 }

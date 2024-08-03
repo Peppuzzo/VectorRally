@@ -24,7 +24,7 @@
 
 package it.unicam.cs.vectorrally.api.items;
 
-/**
+/*
  * this responsibility of this class is to represent the possible directions of movement of a car.
  */
 

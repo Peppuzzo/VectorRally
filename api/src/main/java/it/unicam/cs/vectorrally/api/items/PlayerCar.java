@@ -24,9 +24,9 @@
 
 package it.unicam.cs.vectorrally.api.items;
 
-
 import it.unicam.cs.vectorrally.api.environment.Position;
-import it.unicam.cs.vectorrally.utilities.Color;
+import it.unicam.cs.vectorrally.api.environment.Point;
+import java.awt.Color;
 
 /**
  * This class represents the player's car in the game
@@ -48,9 +48,34 @@ public class PlayerCar extends BaseCar<Position, Color> {
   }
 
   @Override
+  public Point getX() {
+    return null;
+  }
+
+  @Override
+  public Point getY() {
+    return null;
+  }
+
+  @Override
+  public double getSize() {
+    return 0;
+  }
+
+  @Override
   public Color getColor() {
     // TODO Complete this method
     return null;
+  }
+
+  @Override
+  public Direction getDirection() {
+    return null;
+  }
+
+  @Override
+  public boolean isConnectedTo(Segment segment) {
+    return false;
   }
 
   /**

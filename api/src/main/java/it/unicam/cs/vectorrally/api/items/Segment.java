@@ -24,16 +24,25 @@
 
 package it.unicam.cs.vectorrally.api.items;
 
-import it.unicam.cs.vectorrally.utilities.Color;
+import it.unicam.cs.vectorrally.api.environment.Point;
+import java.awt.Color;
 
 public interface Segment {
+
+  /**
+   * @return the x and y coordinates of the segment.
+   */
+  Point getX();
+
+  Point getY();
+
 
     /**
      * Returns the length of the segment.
      *
      * @return the length of the segment.
      */
-    double getLength();
+    double getSize();
 
 
     /**
@@ -43,7 +52,6 @@ public interface Segment {
      */
     Color getColor();
 
-    
 
     /**
      * Returns the direction of the segment.
@@ -51,4 +59,8 @@ public interface Segment {
      * @return the direction of the segment.
      */
     Direction getDirection();
+
+
+    public boolean isConnectedTo(Segment segment);
+
 }

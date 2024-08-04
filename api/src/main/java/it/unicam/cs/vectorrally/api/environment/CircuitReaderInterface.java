@@ -30,7 +30,6 @@ import java.util.List;
 /**
  * An interface representing a reader of a circuit.
  */
-
 public interface CircuitReaderInterface {
 
     /**

@@ -33,12 +33,15 @@ import java.awt.Color;
  */
 public class PlayerCar extends BaseCar<Position, Color> {
 
+  private Direction direction;
+
   /**
    * @param position the position of the car
    * @param color the color of the car
    */
   public PlayerCar(Position position, Color color) {
     super(position, color);
+    this.direction = null;
   }
 
   @Override
@@ -64,17 +67,17 @@ public class PlayerCar extends BaseCar<Position, Color> {
 
   @Override
   public Color getColor() {
-    // TODO Complete this method
-    return null;
+    return this.color = color;
   }
 
   @Override
   public Direction getDirection() {
-    return null;
+    return this.direction;
   }
 
   @Override
   public boolean isConnectedTo(Segment segment) {
+    // TODO Complete this method
     return false;
   }
 

@@ -49,7 +49,6 @@ public class Point implements Position{
     return 0;
   }
 
-
   /**
    * @param o the object to compare
    * @return true if the two objects are equal, false otherwise
@@ -65,5 +64,4 @@ public class Point implements Position{
    * @return the hash code of the object
    */
   public int hashCode() { return Objects.hash(x, y); }
-
 }

@@ -32,11 +32,22 @@ package it.unicam.cs.vectorrally.api.items;
  * An enum representing the possible directions of movement of a car.
  */
 public enum Direction {
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
-  UP_LEFT,
-  UP_RIGHT
+  UP(0, 1),
+  DOWN(0, -1),
+  LEFT(-1, 0),
+  RIGHT(1, 0),
+  UP_LEFT(-1, 1),
+  UP_RIGHT(1, 1),;
+
+  /**
+   * The x coordinate of the direction.
+   */
+  private final int Dx;
+  private final int Dy;
+
+  Direction(int dx, int dy) {
+    this.Dx = dx;
+    this.Dy = dy;
+  }
 }
 

@@ -8,7 +8,6 @@ plugins {
 
 dependencies {
     implementation("org.apache.commons:commons-text")
-    implementation(project(":utilities"))
     implementation(project(":api"))
 }
 
@@ -17,4 +16,7 @@ application {
     mainClass = "it.unicam.cs.vectorrally.app.App"
 }
 
+tasks.getByName("run", JavaExec::class){
+  standardInput = System.`in`
+}
 

@@ -42,7 +42,7 @@ public class BotCar extends BaseCar<Position> {
 
   @Override
   public Position getPosition() {
-    return this.position = position;
+    return this.position;
   }
 
   @Override

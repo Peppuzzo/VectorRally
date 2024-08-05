@@ -34,7 +34,7 @@ import java.awt.Color;
  * this responsibility of this class is to represent the bot car in the game
  */
 
-public class BotCar extends BaseCar<Position, Color> {
+public class BotCar extends BaseCar<Position> {
 
   public BotCar(Position position, Color color) {
     super(position, color);
@@ -42,8 +42,7 @@ public class BotCar extends BaseCar<Position, Color> {
 
   @Override
   public Position getPosition() {
-    // TODO Complete this method
-    return null;
+    return this.position = position;
   }
 
   @Override
@@ -63,8 +62,7 @@ public class BotCar extends BaseCar<Position, Color> {
 
   @Override
   public Color getColor() {
-    // TODO Complete this method
-    return null;
+    return this.color;
   }
 
   @Override

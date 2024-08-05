@@ -31,7 +31,7 @@ import java.awt.Color;
 /**
  * This class represents the player's car in the game
  */
-public class PlayerCar extends BaseCar<Position, Color> {
+public class PlayerCar extends BaseCar<Position> {
 
   private Direction direction;
 
@@ -67,7 +67,7 @@ public class PlayerCar extends BaseCar<Position, Color> {
 
   @Override
   public Color getColor() {
-    return this.color = color;
+    return this.color;
   }
 
   @Override

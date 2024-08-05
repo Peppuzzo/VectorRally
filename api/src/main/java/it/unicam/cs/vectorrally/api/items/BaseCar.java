@@ -32,19 +32,18 @@ import java.awt.Color;
  * @param <P> the position of the car
  * @param <C> the color of the car
  */
-public abstract class BaseCar<P extends Position, C extends Color> implements Movable,Segment {
+public abstract class BaseCar<P extends Position> implements Movable,Segment {
 
   protected P position;
-  protected C color;
+  protected Color color;
 
-  public BaseCar(P position, C color) {
+  public BaseCar(P position, Color color) {
     this.position = position;
     this.color = color;
   }
 
   public abstract P getPosition();
 
-  public abstract C getColor();
-
+  public abstract Color getColor();
 
 }

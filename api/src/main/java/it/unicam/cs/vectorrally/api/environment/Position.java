@@ -30,7 +30,6 @@ package it.unicam.cs.vectorrally.api.environment;
  */
 
 public interface Position {
-
     /**
     * @return the x coordinate of the machine
     */
@@ -40,4 +39,18 @@ public interface Position {
     * @return the y coordinate of the machine
     */
     int getY();
+
+   /**
+    *
+    * @param i the x coordinate of the machine
+    */
+    void setX(int i);
+
+
+   /**
+    *
+    * @param i the y coordinate of the machine
+    */
+    void setY(int i);
+
 }

@@ -22,23 +22,38 @@
  * SOFTWARE.
  */
 
-import it.unicam.cs.vectorrally.api.environment.Position;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+package it.unicam.cs.vectorrally.api.items;
 
-public class CoordinatesPositionTest {
+/**
+ * This class represents the movement of the car
+ */
 
-  @Test
-  void testCoordinatePositive(){
-    Position position = new Position(){
-      @Override
-      public int getX(){ return 1; }
+public class MovementHandler implements Movable {
 
-      @Override
-      public int getY(){ return 1; }
+  private SegmentCurrent segmentCurrent;
 
-      };
-    assertTrue(position.getX() >= 0, "The x coordinate is not positive");
-    assertTrue(position.getY() >= 0, "The y coordinate is not positive");
+  public MovementHandler(SegmentCurrent segmentCurrent) {
+    this.segmentCurrent = segmentCurrent;
+  }
+
+  /**
+   * @param direction the current direction of the car taken
+   */
+  @Override
+  public void move(Direction direction) {
+    switch (direction) {
+      case UP:
+        segmentCurrent.getY().setY(segmentCurrent.getY().getY() + 1);
+        break;
+      case DOWN:
+        segmentCurrent.getY().setY(segmentCurrent.getY().getY() - 1);
+        break;
+      case LEFT:
+        segmentCurrent.getX().setX(segmentCurrent.getX().getX() - 1);
+        break;
+      case RIGHT:
+        segmentCurrent.getX().setX(segmentCurrent.getX().getX() + 1);
+        break;
     }
   }
+}

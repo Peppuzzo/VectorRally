@@ -34,15 +34,10 @@ import java.awt.Color;
  * this responsibility of this class is to represent the bot car in the game
  */
 
-public class BotCar extends BaseCar<Position> {
+public class BotCar extends BaseCar<Position, MovementHandler> {
 
   public BotCar(Position position, Color color) {
     super(position, color);
-  }
-
-  @Override
-  public Position getPosition() {
-    return this.position;
   }
 
   @Override
@@ -70,24 +65,12 @@ public class BotCar extends BaseCar<Position> {
     return null;
   }
 
-  /**
-   * Check if the bot car is connected to the specified segment
-   *
-   * @param segment the segment to check
-   * @return true if the bot car is connected to the specified segment, false otherwise
-   */
   @Override
   public boolean isConnectedTo(Segment segment) {
     return false;
   }
 
-  /**
-   * Move the car in the specified direction
-   *
-   * @param direction the direction in which the car should move
-   */
-  @Override
-  public void move(Direction direction) {
-    // TODO Complete this method
-  }
+
+
+
 }

@@ -31,7 +31,7 @@ import java.awt.Color;
 /**
  * This class represents the player's car in the game
  */
-public class PlayerCar extends BaseCar<Position> {
+public class PlayerCar extends BaseCar<Position, MovementHandler> {
 
   private Direction direction;
 
@@ -42,12 +42,6 @@ public class PlayerCar extends BaseCar<Position> {
   public PlayerCar(Position position, Color color) {
     super(position, color);
     this.direction = null;
-  }
-
-  @Override
-  public Position getPosition() {
-    // TODO Complete this method
-    return null;
   }
 
   @Override
@@ -81,12 +75,8 @@ public class PlayerCar extends BaseCar<Position> {
     return false;
   }
 
-  /**
-   * Move the car in the specified direction
-   * @param direction the direction in which the car should move
-   */
-  @Override
   public void move(Direction direction) {
     // TODO Complete this method
   }
+
 }

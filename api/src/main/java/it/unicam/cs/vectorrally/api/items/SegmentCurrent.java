@@ -47,19 +47,26 @@ public class SegmentCurrent implements Segment {
   }
 
   public Point getX() {
-    return x;
+    return this.x;
   }
 
   public Point getY() {
-    return y;
+    return this.y;
   }
 
   public double getSize() {
-    return size;
+    return this.size;
   }
 
   public Color getColor() {
-    return color;
+    return this.color;
+  }
+
+
+  public void setY(int i) {
+  }
+
+  public void setX(int i) {
   }
 
   @Override
@@ -76,4 +83,5 @@ public class SegmentCurrent implements Segment {
     return this.x.equals(segment.getY()) || this.x.equals(segment.getY())
         || this.y.equals(segment.getX()) || this.y.equals(segment.getY());
   }
+
 }

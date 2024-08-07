@@ -61,6 +61,12 @@ public interface Segment {
     Direction getDirection();
 
 
+    /**
+     * Returns true if the segment is connected to the given segment.
+     *
+     * @param segment the segment to check.
+     * @return true if the segment is connected to the given segment.
+     */
     public boolean isConnectedTo(Segment segment);
 
 }

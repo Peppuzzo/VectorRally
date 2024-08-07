@@ -30,19 +30,20 @@ import java.awt.Color;
 /**
  * This class represents the car in the game
  * @param <P> the position of the car
- * @param <C> the color of the car
  */
-public abstract class BaseCar<P extends Position> implements Movable,Segment {
+public abstract class BaseCar<P extends Position, M extends MovementHandler> implements Segment {
 
   protected P position;
   protected Color color;
+  protected  Direction direction;
+  protected int velocity;
 
   public BaseCar(P position, Color color) {
     this.position = position;
     this.color = color;
+    this.direction = null;
+    this.velocity = 0;
   }
-
-  public abstract P getPosition();
 
   public abstract Color getColor();
 

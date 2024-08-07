@@ -41,12 +41,22 @@ public class Point implements Position{
 
   @Override
   public int getX() {
-    return 0;
+    return this.x;
   }
 
   @Override
   public int getY() {
-    return 0;
+    return this.y;
+  }
+
+  @Override
+  public void setX(int i) {
+    this.x = i;
+  }
+
+  @Override
+  public void setY(int i) {
+    this.y = i;
   }
 
   /**

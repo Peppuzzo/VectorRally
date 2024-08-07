@@ -70,6 +70,6 @@ public class BotCar extends BaseCar<Position, MovementHandler> {
     return false;
   }
 
-  
+
 
 }

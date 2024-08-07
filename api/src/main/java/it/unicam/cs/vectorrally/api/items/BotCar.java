@@ -62,7 +62,7 @@ public class BotCar extends BaseCar<Position, MovementHandler> {
 
   @Override
   public Direction getDirection() {
-    return null;
+    return this.direction;
   }
 
   @Override
@@ -70,7 +70,6 @@ public class BotCar extends BaseCar<Position, MovementHandler> {
     return false;
   }
 
-
-
+  
 
 }
